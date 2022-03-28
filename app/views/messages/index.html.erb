@@ -1,7 +1,10 @@
-<p style="color: green"><%= notice %></p>
+<p id="notice">
+  <%= notice %>
+</p>
 
 <h1>
 Messages:
+<%# Message counter on front page. Handled in controller to utilize Turbo Stream so count updates without needing a refresh. %>
   <span id="message_counter">
     <%= Message.count %>
   </span>

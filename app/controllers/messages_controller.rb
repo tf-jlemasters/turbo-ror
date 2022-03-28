@@ -20,8 +20,8 @@ class MessagesController < ApplicationController
     respond_to do |format|
       format.turbo_stream do 
         render turbo_stream: turbo_stream.update(@message,
-                                                 partial: "messages/form",
-                                                 locals: {message: @message})
+                                                partial: "messages/form",
+                                                locals: {message: @message})
       end
     end
   end
@@ -82,8 +82,8 @@ class MessagesController < ApplicationController
       else
         format.turbo_stream do 
           render turbo_stream: turbo_stream.update(@message,
-                                                   partial: "messages/form",
-                                                   locals: {message: @message})
+                                                  partial: "messages/form",
+                                                  locals: {message: @message})
         end
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @message.errors, status: :unprocessable_entity }
